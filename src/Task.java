@@ -7,6 +7,7 @@ public class Task {
         thirdTask(); // Start third homework task
         fourthTask(); // Start fourth homework task
         fifthTask(); // Start fifth homework task
+        sixthTask(); // Start sixth homework task
     }
 
     // First homework task
@@ -100,5 +101,22 @@ public class Task {
         }
 
         System.out.println(tmp >= 2);
+    }
+
+    // Sixth homework task
+    public static void sixthTask() {
+        System.out.println("===== Task 6th =====");
+
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Please, enter input cords: ");
+        String input = scan.nextLine();
+
+        String[] split_input = input.split(" ");
+        float[] nums = new float[2];
+        for (int counter = 0; counter < 2; counter++) {
+            nums[counter] = Float.parseFloat(split_input[counter]);
+        }
+
+        System.out.println((nums[1] - nums[0]) >= 0 && (nums[1]+nums[0]*nums[0]) <= 2 ? "YES" : "NO");
     }
 }
