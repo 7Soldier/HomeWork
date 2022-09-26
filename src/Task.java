@@ -6,6 +6,7 @@ public class Task {
         secondTask(); // Start second homework task
         thirdTask(); // Start third homework task
         fourthTask(); // Start fourth homework task
+        fifthTask(); // Start fifth homework task
     }
 
     // First homework task
@@ -77,5 +78,27 @@ public class Task {
         float input = scan.nextFloat();
 
         System.out.println((input >= -2 && input <= 3) || (input >= 6 && input <= 9) ? "false" : "true");
+    }
+
+    // Fifth homework task
+    public static void fifthTask() {
+        System.out.println("===== Task 5th =====");
+
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Please, enter input numbers: ");
+        String input = scan.nextLine();
+
+        String[] split_input = input.split(" ");
+        int[] nums = new int[3];
+        for (int counter = 0; counter < 3; counter++) {
+            nums[counter] = Integer.parseInt(split_input[counter]);
+        }
+
+        int tmp = 0;
+        for (int number : nums) {
+            tmp += (number % 100 == 0) && (number % 5 == 0) ? 1 : 0;
+        }
+
+        System.out.println(tmp >= 2);
     }
 }
