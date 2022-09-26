@@ -5,6 +5,7 @@ public class Task {
         firstTask(); // Start first homework task
         secondTask(); // Start second homework task
         thirdTask(); // Start third homework task
+        fourthTask(); // Start fourth homework task
     }
 
     // First homework task
@@ -65,5 +66,16 @@ public class Task {
         String parsed_seconds = String.valueOf(seconds < 10 ? "0" + seconds : seconds);
 
         System.out.println(parsed_hours + ":" + parsed_minutes + ":" + parsed_seconds);
+    }
+
+    // Fourth homework task
+    public static void fourthTask() {
+        System.out.println("===== Task 4th =====");
+
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Please, enter the number: ");
+        float input = scan.nextFloat();
+
+        System.out.println((input >= -2 && input <= 3) || (input >= 6 && input <= 9) ? "false" : "true");
     }
 }
