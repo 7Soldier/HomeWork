@@ -2,12 +2,12 @@ import java.util.Scanner;
 
 public class Task {
     public static void main(String[] args) {
-        firstTask(); // Start first homework task
+        firstTask();  // Start first homework task
         secondTask(); // Start second homework task
-        thirdTask(); // Start third homework task
+        thirdTask();  // Start third homework task
         fourthTask(); // Start fourth homework task
-        fifthTask(); // Start fifth homework task
-        sixthTask(); // Start sixth homework task
+        fifthTask();  // Start fifth homework task
+        sixthTask();  // Start sixth homework task
     }
 
     // First homework task
