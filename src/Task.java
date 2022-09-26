@@ -4,6 +4,7 @@ public class Task {
     public static void main(String[] args) {
         firstTask(); // Start first homework task
         secondTask(); // Start second homework task
+        thirdTask(); // Start third homework task
     }
 
     // First homework task
@@ -45,5 +46,24 @@ public class Task {
         }
 
         System.out.println(rub_price + " " + penny_price);
+    }
+
+    // Third homework task
+    public static void thirdTask() {
+        System.out.println("===== Task 3rd =====");
+
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Please, enter number of seconds: ");
+        int input = scan.nextInt();
+
+        int hours = input / 3600;
+        int minutes = (input / 60) - (hours * 60);
+        int seconds = input - (hours * 3600) - (minutes * 60);
+
+        String parsed_hours = String.valueOf(hours);
+        String parsed_minutes = String.valueOf(minutes < 10 ? "0" + minutes : minutes);
+        String parsed_seconds = String.valueOf(seconds < 10 ? "0" + seconds : seconds);
+
+        System.out.println(parsed_hours + ":" + parsed_minutes + ":" + parsed_seconds);
     }
 }
