@@ -22,7 +22,7 @@ public class Task {
         int second_num = input / 10 % 10;
         int third_num = input % 100 % 10;
         int sum = first_num + second_num + third_num;
-        int next = ((input + 1) % 2 == 0) ? input + 1 : input + 2;
+        int next = ((input + 1) % 2 + 1) + input;
 
         System.out.println(sum + " " + next);
     }
