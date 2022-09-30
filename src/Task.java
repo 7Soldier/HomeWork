@@ -4,6 +4,7 @@ public class Task {
     public static void main(String[] args) {
         firstTask();  // Start first homework task
         secondTask(); // Start second homework task
+        thirdTask();  // Start third homework task
     }
 
     // First task
@@ -62,5 +63,39 @@ public class Task {
 
         System.out.println("Number of rabbits: " + rabbits);
         System.out.println("Number of wolfs: " + wolfs);
+    }
+
+    // Third task
+    public static void thirdTask() {
+        System.out.println("===== Task 3rd =====");
+
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Please, enter the number: ");
+        int input = scan.nextInt();
+
+        int num;
+        if (input < 10) {
+            num = input;
+        } else if (input < 100) {
+            num = input % 10;
+        } else {
+            num = input % 100 % 10;
+        }
+
+        String end;
+        switch (num) {
+            case 1:
+                end = "";
+                break;
+            case 2:
+            case 3:
+            case 4:
+                end = "A";
+                break;
+            default:
+                end = "OV";
+        }
+
+        System.out.println(input + " TORT" + end);
     }
 }
