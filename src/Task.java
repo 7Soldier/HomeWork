@@ -5,6 +5,7 @@ public class Task {
         firstTask();  // Start first homework task
         secondTask(); // Start second homework task
         thirdTask();  // Start third homework task
+        fourthTask(); // Start fourth homework task
     }
 
     // First task
@@ -97,5 +98,23 @@ public class Task {
         }
 
         System.out.println(input + " TORT" + end);
+    }
+
+    // Fourth task
+    public static void fourthTask() {
+        System.out.println("===== Task 4th =====");
+
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Please, enter the number: ");
+        int input = scan.nextInt();
+
+        int tmp = input;
+        int result = 0;
+        for (;input > 0;input /= 10) {
+            result = Math.min(tmp, input % 10);
+            tmp = input % 10;
+        }
+
+        System.out.println(result);
     }
 }
