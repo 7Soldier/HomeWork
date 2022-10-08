@@ -32,16 +32,6 @@ public class MyArrays {
     }
 
     public static int[] minToBegin(int[] nums) {
-        if (nums.length < 2) return new int[]{-1};
-
-        int same = 0;
-        for (int first : nums) {
-            for (int second : nums) {
-                same += first == second ? 0 : 1;
-            }
-        }
-        if (same == 0) return new int[]{-1};
-
         int tmp = nums[0];
         int lowest = 0;
         for (int num : nums) {
